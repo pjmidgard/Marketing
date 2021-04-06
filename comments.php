@@ -413,38 +413,57 @@ echo '
        
 $dlin8=strlen($varN8);
 
-$Vegetables=0;
-$Orange_Juice=0;
-$Black_Chocalate_Ice_Cream=0;
-$Apple_Juice=0;
+
 
 
 
 $dt=3;
 
 	if($varN8=="Vegetables")
-	{$dt=1;
-	$Vegetables=17.60;
+	{$dt=1; 
+	$_SESSION["Vegetables"]=17.60;
+	$Vegetables=$_SESSION["Vegetables"];
 	}
 	
 	if($varN8=="Orange_Juice")
 	{$dt=1;
-	$Orange_Juice=1.20;
+	$_SESSION["Orange_Juice"]=1.20;
+	$Orange_Juice=$_SESSION["Orange_Juice"];
 	} 
 	if($varN8=="Black_Chocalate_Ice_Cream")
 	{$dt=1;
-	$Black_Chocalate_Ice_Cream=2.00;
+	$_SESSION["Black_Chocalate_Ice_Cream"]=2.00;
+	$Black_Chocalate_Ice_Cream=$_SESSION["Black_Chocalate_Ice_Cream"];
 	}
 	if($varN8=="Apple_Juice")
 	{$dt=1;
-	$Apple_Juice=1.00;
+	$_SESSION["Apple_Juice"]=1.00
+	$Black_Chocalate_Ice_Cream=$_SESSION["Apple_Juice"];
 	}
 	
 	if($varN8=="Hi")
-	{$dt=4;}
+	{$dt=4;
+	$Vegetables=0;
+	$Orange_Juice=0;
+	$Black_Chocalate_Ice_Cream=0;
+	$Apple_Juice=0;
+	$_SESSION["Apple_Juice"]=0;
+	$_SESSION["Black_Chocalate_Ice_Cream"]=0;
+	$_SESSION["Orange_Juice"]=0;
+	$_SESSION["Vegetables"]=0;
+	}
 	
 	if($varN8=="Bay")
-	{$dt=5;}
+	{$dt=5;
+	$Vegetables=0;
+	$Orange_Juice=0;
+	$Black_Chocalate_Ice_Cream=0;
+	$Apple_Juice=0;
+	$_SESSION["Apple_Juice"]=0;
+	$_SESSION["Black_Chocalate_Ice_Cream"]=0;
+	$_SESSION["Orange_Juice"]=0;
+	$_SESSION["Vegetables"]=0;
+	}
 
 
 	if($df==0){		
