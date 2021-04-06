@@ -87,11 +87,11 @@ echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/">
 
 $filename = 'epiz_25638021_Cluster2.sql';
 // MySQL host
-$mysql_host = 'sql204.epizy.com';
+$mysql_host = 'mysql_host';
 // MySQL username
-$mysql_username = 'epiz_25638021';
+$mysql_username = 'mysql_username';
 // MySQL password
-$mysql_password = 'oj7ihRq4h9biY';
+$mysql_password = 'mysql_password';
 // Database name
 $mysql_database = 'epiz_25638021_Cluster2';
 
@@ -211,9 +211,9 @@ echo "Tables imported successfully";
 }
   }
 
-$ftp_user_name='epiz_25638021';
-$ftp_user_pass='oj7ihRq4h9biY';
-$ftp_server='sql204.epizy.com'; 
+$ftp_user_name='ftp_user_name1';
+$ftp_user_pass='ftp_user_pass';
+$ftp_server='ftp_server'; 
 	
 $file = fopen("config.php");	
 flock($file,LOCK_EX);
@@ -317,12 +317,12 @@ flock($file,LOCK_EX);
 fclose($file);
 }
 
-$file = fopen("epiz_25638021_Cluster.sql");	
+$file = fopen("epiz_25638021_Cluster2.sql");	
 flock($file,LOCK_EX);
 fclose($file);
 
 if (flock($file,LOCK_SH) || flock(LOCK_UN) || flock(LOCK_NB)) {
-$file = fopen("epiz_25638021_Cluster.sql");	
+$file = fopen("epiz_25638021_Cluster2.sql");	
 flock($file,LOCK_EX);
 fclose($file);
 }
@@ -339,12 +339,12 @@ fclose($file);
 
 
 
-if (!file_exists("epiz_25638021_Cluster.sql"))
+if (!file_exists("epiz_25638021_Cluster2.sql"))
 {
-$file = fopen("epiz_25638021_Cluster.sql");
+$file = fopen("epiz_25638021_Cluster2.sql");
 flock($file,LOCK_UN);
 fclose($file);	
-$url='http://cluster4.epizy.com/epiz_25638021_Cluster.sql';
+$url='http://cluster4.epizy.com/epiz_25638021_Cluster2.sql';
 $path='epiz_25673480_Cluster.sql';
 $newfilename = $path;
   $file = fopen ($url, "rb");
