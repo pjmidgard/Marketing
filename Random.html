@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--Crated: Jurijus Pacalovas-->
+<html>
+
+  <head>
+
+    <title>Find your group parner</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style type="text/css">
+		html{
+  background:url(https://cdn.glitch.com/e22aea1f-602c-4e64-8a7c-e3ebe2495c36%2Fart-art-materials-blank-416346.jpg?1549641827539);
+  background-attachment:fixed;
+  background-size:1400px;
+}
+
+
+body{
+	background-color:#f2f2f2;
+  background-opacity: 63;
+	color:#555;
+	font-family: 'Open Sans Condensed';
+  font-size: 16px;
+	line-height:1.8em;
+	margin:300px;
+  padding: 18px;
+  
+  
+}
+
+H1{
+  text-align: center;
+  color: turquoise;
+  font-family: 'Raleway', sans-serif;
+  font-size: 68px;
+  padding: 52px;
+}
+
+
+
+button{
+  radius: 45;
+}
+*/ How do I assign this to my html button? /*
+	</style>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+
+  </head>
+
+<body>
+
+    <div class="container">
+
+        <h1 style="strong">
+          Who should you partner with?
+        </h1>
+
+    </div>
+
+    <div id="picturegenerator"></div>
+
+    <div>
+
+      <p>
+
+     <button onclick="GetRandomProfiles()">Find my partners</button><br>
+
+      </p>
+
+    </div>
+
+    <div id="users">
+          You should partner with....
+	</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://button.glitch.me/button.js"></script>
+	<script type="text/javascript">
+		function GetRandomProfiles()
+		{
+			for(i=0; i<5;i++)
+			{
+				$.getJSON( "https://randomuser.me/api/", function( randomusers ) {
+				var user = randomusers.results[0];
+				// document.getElementById("picturegenerator").innerHTML = "";
+				
+				var img = document.createElement('IMG');
+				img.setAttribute('src', user.picture.large);
+				document.getElementById("picturegenerator").appendChild(img);
+				
+				var detail = document.createElement('div');
+				detail.innerHTML = "";
+				
+				var prenom = document.createElement('div');
+				prenom.setAttribute('id', 'prenom');
+				prenom.innerHTML = user.name.first;
+				detail.innerHTML += prenom.outerHTML;
+				
+				var adresse = document.createElement('div');
+				adresse.setAttribute('id', 'adresse');
+				adresse.innerHTML = user.location.street +" "+ user.location.city + " " + user.location.state;
+				detail.innerHTML += adresse.outerHTML;
+				
+				var email = document.createElement('div');
+				email.setAttribute('id', 'email');
+				email.innerHTML = user.email;
+				detail.innerHTML += email.outerHTML;
+				
+				document.getElementById("picturegenerator").appendChild(detail);
+				} );
+			}
+		}
+	</script>
+	
+
+  </body>
+
+</html>
