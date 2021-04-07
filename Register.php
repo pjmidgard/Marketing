@@ -146,6 +146,8 @@ function googleTranslateElementInit() {
 <table width="500" height="100" border="1" bgcolor="#FFFFFF" style="border-color: #C0C0C0" align="center">
 <tr><td>
 </form>
+
+</form>
 <form class="center-block">
 
     <input type="text" id="password" autocomplete="off" class="form-control input-lg">
@@ -154,9 +156,14 @@ function googleTranslateElementInit() {
 
     <button class="btn btn-success btn-lg btn-block">Show Password Strength</button>
 
-  </form>
+</form>
 
-  <div class="textbox text-center"> password </div>
+
+
+<div class="textbox text-center"> password </div>
+
+
+
 <script>
 var code = document.getElementById("password");
 
