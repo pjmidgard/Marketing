@@ -76,6 +76,8 @@ function googleTranslateElementInit() {
                         <font style="font-size:12px"> Calculator.php </font></a></li> 
 					    &nbsp;&nbsp;  <li class="s"><a href="Random.html">
                         <font style="font-size:12px"> Random_User </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
+                        <font style="font-size:12px"> Comments </font></a></li> 
 						';
 					
 						
@@ -98,6 +100,8 @@ function googleTranslateElementInit() {
                         <font style="font-size:12px"> IP </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
                         <font style="font-size:12px"> Random_User </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
+                        <font style="font-size:12px"> Comments </font></a></li> 
 						';
 						}
                         else{
@@ -111,6 +115,7 @@ function googleTranslateElementInit() {
 						
 						;
                         }
+					
 						
 					
 					

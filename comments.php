@@ -44,7 +44,7 @@ function googleTranslateElementInit() {
 				<br>
 				<div align="center">
 					<ul>
-						&nbsp;&nbsp; <li class="s"><a href="http://www.cluster4.epizy.com/index.php"><font style="font-size:12px"> Home </font></a></li> 
+						&nbsp;&nbsp; <li class="s"><a href="http://www.cluster.epizy.com/index.php"><font style="font-size:12px"> Home </font></a></li> 
 						<!-- login page -->
 						&nbsp;&nbsp; <li class="s"><a href="About_us_and_Roles.php">
 						<font style="font-size:12px"> About_us_and_Roles </font></a></li> 
@@ -65,19 +65,28 @@ function googleTranslateElementInit() {
                         //fg
 		//////////////////////////////////////////////////////
 						
-					      if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
+					       if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
 						echo '
-						   
+						&nbsp;&nbsp;  <li class="s"><a href="Game.html">
+						<font style="font-size:12px"> Game </font></a></li>    
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
 						<font style="font-size:12px"> Gallery </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
+                        <font style="font-size:12px"> Calculator.php </font></a></li> 
+					    &nbsp;&nbsp;  <li class="s"><a href="Random.html">
+                        <font style="font-size:12px"> Random_User </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
                         <font style="font-size:12px"> Comments </font></a></li> 
 						';
+					
+						
 						}
 					else if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1"){
 						echo ' 
+						&nbsp;&nbsp;  <li class="s"><a href="game.html">
+						<font style="font-size:12px"> Game </font></a></li> 
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li>
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -85,17 +94,29 @@ function googleTranslateElementInit() {
                         &nbsp;&nbsp;  <li class="s"><a href="Gallery2.php">
                         <font style="font-size:12px"> Gallery Update</font></a></li> 						
 						&nbsp;&nbsp;  <li class="s"><a href="Manageusers.php">
-                        <font style="font-size:12px"> Manageusers</font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
-                        <font style="font-size:12px"> Comments </font></a></li> 
+                        <font style="font-size:12px"> Manageusers </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
+                        <font style="font-size:12px"> Calculator.php </font></a></li> 
 					    &nbsp;&nbsp;  <li class="s"><a href="IP.php">
                         <font style="font-size:12px"> IP </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
+                        <font style="font-size:12px"> Random_User </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
+                        <font style="font-size:12px"> Comments </font></a></li> 
 						';
 						}
                         else{
 							echo '&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
-						<font style="font-size:12px"> Gallery </font></a></li> ';
+						<font style="font-size:12px"> Gallery </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="game.html">
+						<font style="font-size:12px"> Game </font></a></li> 
+						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
+                        <font style="font-size:12px"> Random_User </font></a></li> 
+						'
+						
+						;
                         }
+					
 						
 					
 					
@@ -157,13 +178,13 @@ echo '<meta http-equiv="refresh" content="0; url=comments.php">';
 
 if(!isset($_SESSION["fg"]))
 {
-	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 }
 if(!isset($_SESSION["lg"])  || !isset($_SESSION["lj"])  || !isset($_SESSION["fg"])) //die('');
 {
 if(!isset($_SESSION["lfg"]) || $as==2)
 {
-echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';}
+echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';}
 elseif(isset($_SESSION["lfg"])=="You successful Update")
 {
 
@@ -185,7 +206,7 @@ if(isset($_SESSION["lg"]) && isset($_SESSION["lj"]) && !isset($_SESSION["lfg"])=
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}
@@ -193,7 +214,7 @@ $as=1;
   usleep(5000000);
    session_unset();
  session_destroy();$as=2;usleep(5000000);
- echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';
+ echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
  }
  }
 }
@@ -216,7 +237,7 @@ if(!isset($_SESSION["lgi"])) //die('');
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}
@@ -518,7 +539,7 @@ echo $_SESSION["lj"]. " <br> ";
 if(isset($_SESSION["lg"])) //die('');
 {
 echo
-'<form method="POST" action="http://www.cluster4.epizy.com/index.php">
+'<form method="POST" action="http://www.cluster.epizy.com/index.php">
 <input type="submit" name="Sign_out" value="Sign out"></input>
 </form>'; 
 if(isset($_SESSION["lg"]) && isset($_SESSION["lj"])) //die('');
@@ -529,7 +550,7 @@ if(isset($_SESSION["lg"]) && isset($_SESSION["lj"])) //die('');
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster4.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}
