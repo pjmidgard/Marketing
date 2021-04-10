@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 text-center"><hr><h4>Wanna get lunch? Email us at BigCheese@orderfoodeatfood.com</h4><hr>
+        <div class="col-md-12 text-center"><hr><h4>Wanna get lunch? Email us at pj.midgard@yahoo.com</h4><hr>
         </div>
       </div>
       <div class="row">
