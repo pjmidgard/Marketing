@@ -1,170 +1,86 @@
-<!DOCTYPE html><?php // Calculator ^_^ ?>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Calculator</title>
-		<meta name="author" content="An0n 3xPloiTeR, Syed Umar Arfeen" />
-		<style>
-			body {
-				background-color: #080510;
-			}
-			.heading {
-				font-family: cursive;
-				font-size: 300%;
-				color: red;
-				text-align: center;
-			}
-			.calculator {
-				font-family: cursive;
-				font-size: 110%;
-				color: white;
-				text-align: center;
-				margin-top: 10vh;
-			}
-			input {
-				color: white;
-				text-align: center;
-				font-weight: bold; 
-				font-family: cursive;
-				border-left: #080510;
-				border-right: #080510;
-				border-style: groove;
-				background-color: #080510; 
-				font-size: 110%;
-			}
-			select {
-				color: white;
-				text-align: center;
-				font-weight: bold; 
-				font-family: cursive;
-				border-left: #080510;
-				border-right: #080510;
-				border-style: groove;
-				background-color: #080510; 
-				font-size: 95%;
-			}
-			option {
-				color: white;
-				text-align: center;
-				font-weight: bold; 
-				font-family: cursive;
-				border-left: #080510;
-				border-right: #080510;
-				border-style: groove;
-				background-color: #080510; 
-				font-size: 95%;
-			}
-			.footer {
-				left: 0px;
-				right: 0px;
-				bottom: 4px;
-				position: fixed;
-				text-align: center;
-				color: teal;
-				font-family: Comic Sans Ms;
-				font-size: 120%;
-			}
-			a {
-				text-decoration: none;
-				color: red;
-			}
-			a:hover {
-				color: lawngreen;
-			}
-			input[type=number]::-webkit-inner-spin-button, 
-			input[type=number]::-webkit-outer-spin-button { 
-				-webkit-appearance: none; 
-				margin: 0; 
-			}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="heading">
-			<font>Calculator created: Jurijus Pacalovas</font>
-		</div>
-		<div class="calculator">
-			<form action="" method="POST">
-				<input type="number" name="first_input" placeholder="First Number Here" size="20" />&nbsp;&nbsp;&nbsp;
-				<input type="number" name="second_input" placeholder="Second Number Here" size="20" />&nbsp;&nbsp;&nbsp;
-				<select name="function">
-					<option>Add</option>
-					<option>Subtract</option>
-					<option>Multiply</option>
-					<option>Divide</option>
-					<option>Square</option>
-					<option>Square Root</option>
-				</select><br><br><input type="reset" value="Reset">
-				<input type="submit" name="submit" value="Submit" />
-			</form>
-			<?php
-				if (isset($_POST['submit'])) {
-					$input_1 = htmlspecialchars($_POST['first_input']);
-					$input_2 = htmlspecialchars($_POST['second_input']);
-					$operator = $_POST['function'];
 
-					if ($input_1 == null) {
-						die("<br><br>Please Enter The First Number ^_^");
-					}
-
-					/*
-					if (strchr($input_1, "&gt;")) {
-						die("<br><br>You Aren't Allowed To Use > In The Please Of Number");
-					}
-					if (strchr($input_1, "&lt;")) {
-						die("<br><br>You Aren't Allowed To Use < In The Place Of Number");
-					}
-					if (strchr($input_2, "&gt;")) {
-						die("<br><br>You Aren't Allowed To Use > In The Please Of Number");
-					}
-					if (strchr($input_2, "&lt;")) {
-						die("<br><br>You Aren't Allowed To Use < In The Place Of Number");
-					}
-					*/
-
-					switch ($operator) {
-						case 'Add':
-							$adding = $input_1 + $input_2;
-							echo "<br><br>Result:<br> " . $adding;
-						break;
-
-						case 'Subtract':
-							$subtracting = $input_1 - $input_2;
-							echo "<br><br>Result:<br> " . $subtracting;
-						break;
-
-						case 'Multiply':
-							$multiply = $input_1 * $input_2;
-							echo "<br><br>Result:<br>" . $multiply;
-						break;
-
-						case 'Divide':
-							$divide = $input_1 / $input_2;
-							echo "<br><br>Result:<br>" . $divide;
-						break;
-
-						case 'Square':
-							$square = $input_1 * $input_1;
-							die("<br><br>Result:<br>" . $square);
-						break;
-
-						case 'Square Root':
-							$square_root = sqrt($input_1);
-							die("<br><br>Result:<br>" . $square_root);
-						break;
-					}
-				}
-			?>
-		</div>
-		<div class="footer">
-			<footer>
-				<hr>
-					<font>Developed By 
-						<a href="https://www.google.com/search?q=An0n 3xPloiTeR" target="_blank">Jurijus Pacalovas</a>
-					</font>
-				<hr>
-			</footer>
-<!--  Give a Visit :D  -->
-		</div>
-	</body>
+<!-- Created: Jurijus Pacalovas -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Order Food Eat Food</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="calculator.php">Order Food Eat Food</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="calculator.php">Home</a></li>
+            <li><a href="pages/orders.html">Order Food</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-->
+    </nav>
+    <div class="container">
+      <div class="page-header">
+        <h1>Eat Some Food. <small>Your Mom would want you to.</small></h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="http://i.imgur.com/Z2E3IPq.jpg" alt="pizza">
+        </div>
+      </div>
+<!-- Order Food Button on Main Page Below Main Image -->
+      <!-- <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Hungry? In Seattle? <small>We have a solution for you.</small></h3>
+          <p>Using our convenient web app, you'll get all the power of gFood without having to call your order in. Order in your pajamas, order 24hours a day, order on Christmas, we're here to serve you.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Almost as fast as your internet. <small>unless you have crappy internet and then we're probably faster.</small></h3>
+          <p>You've never seen ordering this quick. Our proprietary ordering rocket ship delivery team allows you to spend less time being hungry, and more time doing what matters most to you. We'd ask what that is, but gFood respects your privacy.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Why we are awesome. <small>And how you can join our cool kids club.</small></h3>
+          <p>Money: You've got it, we want it. But let it never be said we're not incredibly fair! Burger sales? Check. Pizza sales? Check. Burger and pizza sales?? Check, check, check! We seriously can't stop making deals.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center"><hr><h4>Wanna get lunch? Email us at BigCheese@orderfoodeatfood.com</h4><hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            <a href="www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
+            <a href="www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center"><p><small>&copy; Eat food and Be Happy.</small></p>
+        </div>
+        <div class="col-md-12 text-center"><p><small>Made with Love in Seattle.</small></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
