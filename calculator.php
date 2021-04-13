@@ -1,4 +1,6 @@
-
+<?php>
+	require_once('config.php');
+?>
 <!-- Created: Jurijus Pacalovas -->
 <!DOCTYPE html>
 <html>
@@ -13,6 +15,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
+  <?php if(!isset($_SESSION["fg"]))
+{
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com.epizy.com/index.php">';
+}?>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">

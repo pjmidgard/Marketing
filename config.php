@@ -30,8 +30,6 @@ $result8 ='http://www.cluster.epizy.com/calculator.php/';
 $result8=strlen($result8);
 $result9 ='http://www.cluster.epizy.com/Register.php/';
 $result9=strlen($result9);
-$result110 ='http://www.cluster.epizy.com/Register.php/';
-$result10=strlen($result19);
 $result1 = substr($actual_link2, 0, $result1);
 $result2 = substr($actual_link2, 0, $result2);
 $result3 = substr($actual_link2, 0, $result3);
@@ -41,7 +39,6 @@ $result6 = substr($actual_link2, 0, $result6);
 $result7 = substr($actual_link2, 0, $result7);
 $result8 = substr($actual_link2, 0, $result8);
 $result9 = substr($actual_link2, 0, $result9);
-$result10 = substr($actual_link2, 0, $result10);
 
 
 if($result1=="http://www.cluster.epizy.com/IP.php/")
@@ -84,11 +81,6 @@ echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/">
 }
 
 if($result9=="http://www.cluster.epizy.com/Register.php/")
-{
-echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/">';
-}
-
-if($result10=="http://www.cluster.epizy.com/comments.php/")
 {
 echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/">';
 }

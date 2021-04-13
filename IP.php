@@ -36,7 +36,7 @@ function googleTranslateElementInit() {
 		  ?>
 						<div id="header" style="border-style: solid; border-width: 1px; padding-left: 1px; padding-right:
 						1px; padding-top: 1px; padding-bottom: 1px"><br>
-	&nbsp;&nbsp; <marquee> Marketing  </marquee><br>
+	&nbsp;&nbsp; <marquee> Web Technology </marquee><br>
 	&nbsp;&nbsp; 
 						</div>
 <div id="horizontal_menu" style="border-style: solid; border-width: 1px; padding-left: 1px; padding-right: 1px;
@@ -66,28 +66,19 @@ function googleTranslateElementInit() {
                         //fg
 		//////////////////////////////////////////////////////
 						
-				 if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
+					    if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
 						echo '
-						&nbsp;&nbsp;  <li class="s"><a href="Game.html">
-						<font style="font-size:12px"> Game </font></a></li>    
+						   
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
 						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
-                        <font style="font-size:12px"> Calculator.php </font></a></li> 
-					    &nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
                         <font style="font-size:12px"> Comments </font></a></li> 
 						';
-					
-						
 						}
 					else if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1"){
 						echo ' 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li>
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -95,81 +86,17 @@ function googleTranslateElementInit() {
                         &nbsp;&nbsp;  <li class="s"><a href="Gallery2.php">
                         <font style="font-size:12px"> Gallery Update</font></a></li> 						
 						&nbsp;&nbsp;  <li class="s"><a href="Manageusers.php">
-                        <font style="font-size:12px"> Manageusers </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
-                        <font style="font-size:12px"> Calculator.php </font></a></li> 
-					    &nbsp;&nbsp;  <li class="s"><a href="IP.php">
-                        <font style="font-size:12px"> IP </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
+                        <font style="font-size:12px"> Manageusers</font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
                         <font style="font-size:12px"> Comments </font></a></li> 
+					    &nbsp;&nbsp;  <li class="s"><a href="IP.php">
+                        <font style="font-size:12px"> IP </font></a></li> 
 						';
 						}
                         else{
 							echo '&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
-						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
-						'
-						
-						;
+						<font style="font-size:12px"> Gallery </font></a></li> ';
                         }
-					 if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
-						echo '
-						&nbsp;&nbsp;  <li class="s"><a href="Game.html">
-						<font style="font-size:12px"> Game </font></a></li>    
-					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
-						<font style="font-size:12px"> Update_Details </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
-						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
-                        <font style="font-size:12px"> Calculator.php </font></a></li> 
-					    &nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
-                        <font style="font-size:12px"> Comments </font></a></li> 
-						';
-					
-						
-						}
-					else if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1"){
-						echo ' 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
-					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
-						<font style="font-size:12px"> Update_Details </font></a></li>
-						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
-                        <font style="font-size:12px"> Gallery Add</font></a></li>
-                        &nbsp;&nbsp;  <li class="s"><a href="Gallery2.php">
-                        <font style="font-size:12px"> Gallery Update</font></a></li> 						
-						&nbsp;&nbsp;  <li class="s"><a href="Manageusers.php">
-                        <font style="font-size:12px"> Manageusers </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="calculator.php">
-                        <font style="font-size:12px"> Calculator.php </font></a></li> 
-					    &nbsp;&nbsp;  <li class="s"><a href="IP.php">
-                        <font style="font-size:12px"> IP </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="comments.php">
-                        <font style="font-size:12px"> Comments </font></a></li> 
-						';
-						}
-                        else{
-							echo '&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
-						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
-                        <font style="font-size:12px"> Random_User </font></a></li> 
-						'
-						
-						;
-                        }
-					
-					
 						
 					
 					
@@ -191,7 +118,7 @@ function googleTranslateElementInit() {
 			</div>  
 			<div id="Bofore_Content" style="border-style: solid; border-width: 1px; padding-left: 1px; 
 			padding-right: 1px; padding-top: 1px; padding-bottom: 1px">
-							<p align="center"><b><font color ="#FFF8D2"><br> Marketing
+							<p align="center"><b><font color ="#FFF8D2"><br> Web Technology
 				</font></b></p></div>
 				<div id="section" style="border-style: solid; border-width: 1px; padding-left: 1px; 
 				padding-right: 1px; padding-top: 1px; padding-bottom: 1px">
@@ -546,7 +473,7 @@ if(isset($_SESSION["lg"])) //die('');
 	&nbsp;&nbsp;';}?> 
 						</div>
 			<br><br>
-	<?php
+<?php
 // Assuming session is already started
 $uri = md5($_SERVER['REQUEST_URI']);
 $exp = 3; // 3 seconds
