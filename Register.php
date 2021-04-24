@@ -28,7 +28,7 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
-			<?php session_start();  $df=0; $ds=0; error_reporting(0);?>
+			<?php session_start();  $df=0; $ds=0; $df1=0; error_reporting(0);?>
 						<div id="header" style="border-style: solid; border-width: 1px; padding-left: 1px; padding-right:
 						1px; padding-top: 1px; padding-bottom: 1px"><br>
 	&nbsp;&nbsp; <marquee> Web Technology </marquee><br>
@@ -147,16 +147,16 @@ function googleTranslateElementInit() {
 <tr><td>
 </form>
 
-</form>
-<form class="center-block">
+
+<form class="center-block" method="POST" action="Register.php">
 
     <input type="text" id="password" autocomplete="off" class="form-control input-lg">
 
     <progress max="100" value="0" id="meter"></progress>
 
-    <button class="btn btn-success btn-lg btn-block">Show Password Strength</button>
+    
 
-</form>
+
 
 
 
@@ -177,23 +177,37 @@ code.addEventListener("keyup", function() {
 
 function checkpassword(password) {
   var strength = 0;
+
+
   if (password.match(/[a-z]+/)) {
     strength += 1;
+	
+	
   }
   if (password.match(/[A-Z]+/)) {
     strength += 1;
+	
   }
   if (password.match(/[0-9]+/)) {
     strength += 1;
+
+	
+	
   }
   if (password.match(/[$@#&!]+/)) {
     strength += 1;
+	
 
   }
 
   if (password.length < 8) {
     display.innerHTML = "minimum number of characters is 8";
+	
   }
+  
+
+
+
 
   
 
@@ -220,7 +234,7 @@ function checkpassword(password) {
   }
 }
 </script>
-<form method="POST" action="Register.php">
+
 <?php
 
 if(isset($_SESSION["lg"])) //die('');
@@ -260,6 +274,8 @@ echo '
 ';
 ///insert into instructor values
 
+
+
          	if ($_SERVER["REQUEST_METHOD"] == "POST") 
 	{
 	$df=0;$gh=0;
@@ -272,7 +288,7 @@ echo '
         $varN4 = mysqli_real_escape_string($cond, $_POST["first_name"]);	
         $varN5 = mysqli_real_escape_string($cond, $_POST["last_name"]);
         $varN6 = mysqli_real_escape_string($cond, $_POST["email"]);
-		$varN7 = mysqli_real_escape_string($cond, $_POST["pass3"]);
+		$varN7 = mysqli_real_escape_string($cond, $_POST["password"]);
 		$i=0; $add;$h=0;$addg=" ";
 		$dlin7=strlen($varN6);
 		$dlin8=$dlin7-1;
@@ -293,7 +309,7 @@ echo '
          }		
 		if($addg!="@" && $i<$dlin8 || $addg!="@" && $i<$dlin7)
 		{
-		$dt=3;
+		$dt=3; $df1=3;
 		 echo '
 		<font color="#E2000D" style="font-size: 10pt">
 		&nbsp;&nbsp;  You wrong fill the email column, please, try again !!! </font>';
@@ -349,13 +365,13 @@ Students` (`student_id`,`first_name`,`last_name`,`email`,`password`,`admin`) VAL
 		*/
 //
 
-if($dlin1>0 && $dlin2>0 && $dlin3>0 && $dlin4>0 && $dlin5>0 && $dlin6>0 && $varN2==$varN3)
+if($dlin1>0 && $dlin2>0 && $dlin3>0 && $dlin4>0 && $dlin5>0 && $dlin6>0 && $varN2==$varN3 && $varN2==$varN7)
 {
 $sql = "SELECT * FROM Students WHERE student_id = '$varN1%'";
 }
 
 
-if($dlin1>0 && $dlin2>0 && $dlin3>0 && $dlin4>0 && $dlin5>0 && $dlin6>0 && $varN2==$varN3)
+if($dlin1>0 && $dlin2>0 && $dlin3>0 && $dlin4>0 && $dlin5>0 && $dlin6>0 && $varN2==$varN3 && $varN2==$varN7)
 {
 $items = $dbConnection->prepare("$sql");
 $items->execute();
@@ -397,15 +413,16 @@ $sql = "insert into Students (student_id,first_name,last_name,email,password,adm
 	
 
 //session
-if($varN2!=$varN3)
+if($varN2!=$varN3 && $varN2!=$varN3 && $varN2!=$varN3 && $varN2!=$varN7)
 {
 echo '<font color="#E2000D" style="font-size: 12pt">
 &nbsp;&nbsp;  The password you typed don not match, please, try again!!! </font>';
+
 }       
         elseif($dlin1>10)
 		{echo '<font color="#E2000D" style="font-size: 12pt">
 		&nbsp;&nbsp;  Please, try fill our Register form again!!! Too much numbers!!! </font>';} 
-		elseif($dlin1>10 || $dlin1==0 || $dlin2==0 || $dlin3==0 || $dlin4==0 || $dlin5==0 || $dlin6==0 || $varN2!=$varN3)
+		elseif($dlin1>10 || $dlin1==0 || $dlin2==0 || $dlin3==0 || $dlin4==0 || $dlin5==0 || $dlin6==0 || $varN2!=$varN7 || $varN2!=$varN3)
 		{echo '<font color="#E2000D" style="font-size: 12pt">
 		&nbsp;&nbsp;  Please, try fill our Register form again!!! </font>';} 
 		//////
@@ -415,16 +432,19 @@ echo '<font color="#E2000D" style="font-size: 12pt">
 		&nbsp;&nbsp;  Please, try fill our UPDATE form again!!! Must be numbers </font>';$as=1;
 			
 		}
-else
+		
+if($df==1){echo '<font color="#E2000D" style="font-size: 10pt">
+&nbsp;&nbsp; This ID already exist please, try again !!! </font>';}  
+
+if($df==0)
 {
 
-if($df==0){	
 $items = $dbConnection->prepare("$sql");
 $items->execute();
+
  echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
-}
-if($df==1){echo '<font color="#E2000D" style="font-size: 10pt">
-&nbsp;&nbsp; This ID already exist please, try again !!! </font>';} 
+
+
 //session
 //echo  $row[0]." <br> "; 
 
@@ -458,7 +478,7 @@ if($df==1){echo '<font color="#E2000D" style="font-size: 10pt">
 		<table class="one"  align="center">
 		<tr> <td>
 		<br>
-		<form method="POST" action="http://www.cluster.epizy.com/index.php">
+	
 
 
 

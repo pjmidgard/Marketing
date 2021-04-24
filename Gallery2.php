@@ -42,7 +42,7 @@ function googleTranslateElementInit() {
 				<br>
 				<div align="center">
 					<ul>
-						&nbsp;&nbsp; <li class="s"><a href="http://www.faleristics4eforever.epizy.com/index.php"><font style="font-size:12px"> Home </font></a></li> 
+						&nbsp;&nbsp; <li class="s"><a href="http://www.cluster.epizy.com/index.php"><font style="font-size:12px"> Home </font></a></li> 
 						<!-- login page -->
 						&nbsp;&nbsp; <li class="s"><a href="About_us_and_Roles.php">
 						<font style="font-size:12px"> About_us_and_Roles </font></a></li> 
@@ -130,7 +130,7 @@ function googleTranslateElementInit() {
 <form method="POST" action="Gallery2.php">
 <?php
 if($_SESSION["fg"]=="0"){
-	echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 }
 unset($_SESSION['lfgf']);
 session_destroy($_SESSION['lfgf']);
@@ -160,13 +160,13 @@ echo '<meta http-equiv="refresh" content="0; url=Gallery2.php">';
 
 if(!isset($_SESSION["fg"]))
 {
-	echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 }
 if(!isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1" || !isset($_SESSION["lj"])   &&  $_SESSION["fg"]=="1" || !isset($_SESSION["fg"])  &&  $_SESSION["fg"]=="1") //die('');
 {
 if(!isset($_SESSION["lfg"]) || $as==2)
 {
-echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';}
+echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';}
 elseif(isset($_SESSION["lfg"])=="You successful Update")
 {
 
@@ -188,7 +188,7 @@ if(isset($_SESSION["lg"]) && isset($_SESSION["lj"]) && !isset($_SESSION["lfg"])=
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}
@@ -196,7 +196,7 @@ $as=1;
   usleep(5000000);
    session_unset();
  session_destroy();$as=2;usleep(5000000);
- echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+ echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
  }
  }
 }
@@ -219,7 +219,7 @@ if(!isset($_SESSION["lgi"]) || $_SESSION["fg"]=="0") //die('');
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}
@@ -697,7 +697,7 @@ echo $_SESSION["lj"]. " <br> ";
 if(isset($_SESSION["lg"])) //die('');
 {
 echo
-'<form method="POST" action="http://www.faleristics4eforever.epizy.com/index.php">
+'<form method="POST" action="http://www.cluster.epizy.com/index.php">
 <input type="submit" name="Sign_out" value="Sign out"></input>
 </form>'; 
 if(isset($_SESSION["lg"]) && isset($_SESSION["lj"])) //die('');
@@ -708,7 +708,7 @@ if(isset($_SESSION["lg"]) && isset($_SESSION["lj"])) //die('');
 	{
 	session_unset();
 	session_destroy();
-	echo '<meta http-equiv="refresh" content="0; url=http://www.faleristics4eforever.epizy.com/index.php">';
+	echo '<meta http-equiv="refresh" content="0; url=http://www.cluster.epizy.com/index.php">';
 	}
 		}
 	}

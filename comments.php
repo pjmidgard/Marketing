@@ -133,7 +133,7 @@ function googleTranslateElementInit() {
 			if(isset($_SESSION["lg"])){
 			echo'&nbsp;&nbsp;&nbsp;&nbsp;
 			<ul>
-			<li> <font style="font-size: 12pt">  On  <u>comments </u> This page for buy the Web Technology </font> </li>
+			<li> <font style="font-size: 12pt">  On  <u>comments </u> This page for buy products </font> </li>
 			</ul>';}?>
 			
 			</div>  
@@ -504,6 +504,88 @@ $_SESSION["lfg"]="You successful comments";
 ?>
 </td></tr>
 </form>
+<form class="center-block">
+
+    <input type="text" id="Food" autocomplete="off" class="form-control input-lg">
+
+    <progress max="100" value="0" id="meter"></progress>
+
+    <button class="btn btn-success btn-lg btn-block">Buy</button>
+	
+
+</form>
+
+<?php
+
+ echo 'Euro:';
+
+		?>
+
+<div class="textbox text-center"> Food </div>
+ 
+<script>
+var code = document.getElementById("Food");
+
+var strengthbar = document.getElementById("meter");
+var display = document.getElementsByClassName("textbox")[0];
+
+
+
+code.addEventListener("keyup", function() {
+  checkFood(code.value);
+});
+
+
+function checkFood(Food) {
+  var strength = 0;
+  if (Food.match(/[Vegetable]+/)) {
+    strength += 1;
+  }
+  if (Food.match(/[Apple Juice]+/)) {
+    strength += 1;
+  }
+  if (Food.match(/[Orange Juice]+/)) {
+    strength += 1;
+  }
+  if (Food.match(/[Black Chocolate Ice Cream]+/)) {
+    strength += 1;
+
+  }
+
+ 
+if (Food.length >8) {	
+
+
+
+display.innerHTML = strengthbar.value.toString(); }
+  
+
+  switch (strength) {
+    case 0:
+      strengthbar.value = 0;
+      break;
+
+    case 1:
+      strengthbar.value = 25;
+      break;
+
+    case 2:
+      strengthbar.value = 50;
+      break;
+
+    case 3:
+      strengthbar.value = 75;
+      break;
+
+    case 4:
+      strengthbar.value = 100;
+      break;
+	  
+
+
+  }
+}
+</script>
 </table>
 			</div>			
 	   <div id="After_Content" style="border-style: solid; border-width: 1px; padding-left: 1px; padding-right: 1px; 
