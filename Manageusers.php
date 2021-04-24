@@ -68,8 +68,7 @@ function googleTranslateElementInit() {
 					  	
 					    if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
 						echo '
-						&nbsp;&nbsp;  <li class="s"><a href="Game.html">
-						<font style="font-size:12px"> Game </font></a></li>    
+				   
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -86,8 +85,8 @@ function googleTranslateElementInit() {
 						}
 					else if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1"){
 						echo ' 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
+					
+				
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li>
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -109,8 +108,7 @@ function googleTranslateElementInit() {
                         else{
 							echo '&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
 						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
+						
 						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
                         <font style="font-size:12px"> Random_User </font></a></li> 
 						'

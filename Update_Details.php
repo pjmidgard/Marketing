@@ -65,8 +65,7 @@ function googleTranslateElementInit() {
 						
 					    if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="0"){
 						echo '
-						&nbsp;&nbsp;  <li class="s"><a href="Game.html">
-						<font style="font-size:12px"> Game </font></a></li>    
+						 
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li> 
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -83,8 +82,7 @@ function googleTranslateElementInit() {
 						}
 					else if(isset($_SESSION["lg"])  &&  $_SESSION["fg"]=="1"){
 						echo ' 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
+						
 					    &nbsp;&nbsp;  <li class="s"><a href="Update_Details.php">
 						<font style="font-size:12px"> Update_Details </font></a></li>
 						&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
@@ -106,8 +104,7 @@ function googleTranslateElementInit() {
                         else{
 							echo '&nbsp;&nbsp;  <li class="s"><a href="Gallery.php">
 						<font style="font-size:12px"> Gallery </font></a></li> 
-						&nbsp;&nbsp;  <li class="s"><a href="game.html">
-						<font style="font-size:12px"> Game </font></a></li> 
+						
 						&nbsp;&nbsp;  <li class="s"><a href="Random.html">
                         <font style="font-size:12px"> Random_User </font></a></li> 
 						'
@@ -139,7 +136,7 @@ function googleTranslateElementInit() {
 			';}?></div>
 			<div id="Bofore_Content" style="border-style: solid; border-width: 1px; padding-left: 1px; 
 			padding-right: 1px; padding-top: 1px; padding-bottom: 1px">
-							<p align="center"><b><font color ="#FFF8D2"><br> Web Technology
+							<p align="center"><b><font color ="#FFF8D2"><br> Marketing
 				</font></b></p></div>
 				<div id="section" style="border-style: solid; border-width: 1px; padding-left: 1px; 
 				padding-right: 1px; padding-top: 1px; padding-bottom: 1px">
